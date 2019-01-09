@@ -52,7 +52,7 @@ mail: ${EMAIL}
 userPassword: ${PASSWD}
 EOF
 
-curl -s --user "${MAILGUN_KEY}" \
+curl -s --user "api:${MAILGUN_KEY}" \
 	https://api.mailgun.net/v3/mail.ntuhpc.org/messages \
 	-F from='NTUHPC Info <info@mail.ntuhpc.org>' \
 	-F to=${EMAIL} \
